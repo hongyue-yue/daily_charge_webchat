@@ -58,7 +58,6 @@ async function createDirPath(){
 async function readFile(filePath){
   return new Promise(async (resolve, reject) =>{
     if (!await exitDirPath('/bill/'+filePath+'.json')){
-    
       resolve([])
       return 
     }
@@ -109,7 +108,7 @@ async function getFileList() {
     FileSystemManager.readdir({
       dirPath: wx.env.USER_DATA_PATH + "/bill",
       success(res){
-        resolve(true)
+        resolve(res.files)
       },
       fail(err){
         console.log('读取失败', err)

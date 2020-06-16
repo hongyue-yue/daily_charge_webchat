@@ -1,6 +1,12 @@
 <view class="container">
  <view class="top-image">
-   <view class="">
+   <view class="top-left">
+     <view class="left-text"><text class="text-month">6</text>月支出</view>
+    <view class="left-text"><text class="text-spending">0.00</text></view>
+    <view class="left-text">本月收入<text>0.00</text></view>
    </view>
+ </view>
+ <view class="card-con">
+ <AccountWaterCard />
  </view>
 </view>

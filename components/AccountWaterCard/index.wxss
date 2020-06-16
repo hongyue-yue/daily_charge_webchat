@@ -1,0 +1,45 @@
+.water-card{
+  margin-top:20rpx;
+  padding:20rpx;
+  background-color:#fff;
+  border-radius:5rpx;
+  display: flex;
+  align-items:center
+}
+.card-icon{
+  width:55rpx;
+  height:55rpx;
+  display:inline-block;
+  background-repeat: no-repeat;
+  background-size:100%;
+}
+.today-icon{
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAABoUlEQVRoQ+1ZXUrDQBCeiYI04kGSvNueQGsKXkXwBOoBBK8iNFZPYHxv4j2EFEEz0ofqKtlmx9kQorPPM7PzzffN/iIMfODA84f/ByDKqnrDWpmGgQ8GJTHZDERZRQYAtn8TYElMdgKSyWxsSWJuBRAvqkOq4QYAxsbkps8nG0Ip2WLmGMBZMQ2fbPGtAJLsNa7hfSlMzIt7ADvJMt0rmoJZAcTZakFAx14yEAZBwPsiHU1ZAExdCuf34l6mYWOxrQwoAC91/woiYqA8GXnZsLiYoruVuWn+XkI29NyEuPYu+4NTD/wpAOa5ZVtFiejqebZ/wa26ad8JA66rExFdKgCHgyO7B5QBRlNoDzRdXFRCKqHvFWCvQkDkfg1FFN3YOmlihgLEpgrA9/MJlxJlQBngauaHvUpIJaQSan8J5x8lhFXluGsTaxNz9NJgK5XQo/GxIToWC3BsejQv03DCel6P59WYENYgeh9IMClmYc4CsDaOb18S2g2uAfCoHxT0gG/1eXF6YP0pcr9d9YOgdVYF0Fqijg2UgY4L3Bp+8Ax8ANQadkAVF/ZHAAAAAElFTkSuQmCC');
+}
+.card-text{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  padding:0 20rpx;
+  font-size:14px;
+}
+.card-amount{
+  font-size:12px;
+  color:#ccc
+}
+.card-spending{
+  float:right;
+  color:green
+}
+.card-earning{
+  float:right;
+  color:#ff5722
+}
+.card-arrow{
+  width:45rpx;
+  height:50rpx;
+  display:inline-block;
+  background-repeat: no-repeat;
+  background-size:100%;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAB+klEQVRoQ+3ZzUoDMRAH8JlFEARBEEEQhIIoIgiCIH7hrkUQBVFQzx58BO+tz+FBPNoevHjtZtODj+ITeCwZCQTpFoU2HxMXds/N7v+XmSTdFqHiF1Y8P9SA2BWsK1DZChRFcQMAl0S0CwAvWZY9xsBYt5AQ4hkA7oZCt2MgXABtAGiNzDo7whqQ5/kGInYBYD0mwhqgQ/f7/c3BYNBFxNVYCCeADi2l3FJKdQBgJQbCGaBDCyG2AUAjGtwILwAdOs/znSRJOkS0zInwBtChe73enkYAwBIXwivAtNMBAOjdaZED4R1g2unIbLELoRFBAGZ3Oja703xIRDCADl0UxQkR6TUxFwoRFGDWxKnZYmdDIIIDzJo4N1vsjG8EC8AgLhBRt9O0TwQbwJwTV+acmPKFYAWYNXFt1sTPsxHxk4jWsiz7mvSliB2g3+TMzlTKqpTabzabH/8a8Fd4RLxN01Sf3hNfbBUIEV5rWQChwrMAQoYPDggdPiiAI3wwAFf4IADO8N4B3OG9AmKE9wYwP/S+ElHpXHE5Ycc9kp0PspjhnSsQO7wTQEp5RkTvMdpmuL2sW0gI8QQA96WbOXyrHLfnRz/nAij9P8CxYH9DWgOklA2lVIuIDpMkeUjT9M12Fl3GWQNcHupzbA3wOZs296orYDNrPsdUvgLfthsGQN8Zt2sAAAAASUVORK5CYII=');
+}

@@ -1,5 +1,7 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "AccountWaterCard":"../../components/AccountWaterCard"
+  },
   "navigationBarTitleText": "账单流水",
   "navigationBarTextStyle": "black"
 }

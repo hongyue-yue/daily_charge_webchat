@@ -6,3 +6,26 @@
 background-size:100% 100%;
 height:450rpx;
 }
+.top-left{
+  position: absolute;
+  bottom:0;
+  left:0;
+  padding:0 0 15rpx 30rpx;
+}
+.left-text{
+  font-size:14px;
+  padding:5rpx;
+  color:#fff
+}
+.text-month{
+  font-size:20px;
+  color:#ffff66
+}
+.text-spending{
+  font-size: 22px;
+}
+.card-con{
+  width:100%;
+  flex:1;
+  padding:0 20rpx;
+}
