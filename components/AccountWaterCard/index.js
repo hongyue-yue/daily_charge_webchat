@@ -6,8 +6,9 @@ Component({
   properties: {
     title:String,
     iconClass:String,
-    amountData:String,
-    timeRange:String,
+    incomeAmount:String,
+    spendAmount:String,
+    dateRange:String,
   },
   /**
    * 组件的初始数据

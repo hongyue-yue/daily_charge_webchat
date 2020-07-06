@@ -58,9 +58,11 @@ async function createDirPath(){
 async function readFile(filePath){
   return new Promise(async (resolve, reject) =>{
     if (!await exitDirPath('/bill/'+filePath+'.json')){
+      console.log(filePath)
       resolve([])
       return 
     }
+    
     FileSystemManager.readFile({
       filePath: wx.env.USER_DATA_PATH + "/bill/" + filePath + ".json",
       encoding: 'utf8',
@@ -119,10 +121,11 @@ async function getFileList() {
 }
 
 module.exports = {
-  formatDate: formatDate,
-  exitDirPath: exitDirPath,
-  writeFile: writeFile,
-  readFile: readFile,
-  createDirPath: createDirPath
+  formatDate,
+  exitDirPath,
+  writeFile,
+  readFile,
+  createDirPath,
+  getFileList
 }
 

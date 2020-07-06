@@ -1,12 +1,39 @@
 <view class="container">
  <view class="top-image">
    <view class="top-left">
-     <view class="left-text"><text class="text-month">6</text>月支出</view>
-    <view class="left-text"><text class="text-spending">0.00</text></view>
-    <view class="left-text">本月收入<text>0.00</text></view>
+     <view class="left-text"><text class="text-month">{{month}}</text>月支出</view>
+    <view class="left-text"><text class="text-spending">{{monthData.spendAmount}}</text></view>
+    <view class="left-text">本月收入<text>{{monthData.incomeAmount}}</text></view>
    </view>
  </view>
  <view class="card-con">
- <AccountWaterCard />
+ <AccountWaterCard 
+    title="今天"
+    iconClass="today-icon"
+    incomeAmount="{{todayData.incomeAmount}}"
+    spendAmount="{{todayData.spendAmount}}"
+    dateRange="{{todayData.dateRange}}"
+ />
+ <AccountWaterCard 
+    title="本周"
+    iconClass="week-icon"
+    incomeAmount="{{weekData.incomeAmount}}"
+    spendAmount="{{weekData.spendAmount}}"
+    dateRange="{{weekData.weekRange}}"
+ />
+ <AccountWaterCard 
+    title="本月"
+    iconClass="month-icon"
+    incomeAmount="{{monthData.incomeAmount}}"
+    spendAmount="{{monthData.spendAmount}}"
+    dateRange="{{monthData.monthRange}}"
+ />
+ <AccountWaterCard 
+    title="上月"
+    iconClass="lastMonth-icon"
+    incomeAmount="{{lastMonthData.incomeAmount}}"
+    spendAmount="{{lastMonthData.spendAmount}}"
+    dateRange="{{lastMonthData.lastMonthRange}}"
+ />
  </view>
 </view>

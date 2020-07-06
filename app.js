@@ -34,6 +34,7 @@ App({
   //   })
   // },
   globalData: {
-    userInfo: null
+    todayData:null,
+    weekData:null,
   }
 })

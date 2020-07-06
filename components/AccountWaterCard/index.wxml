@@ -1,9 +1,9 @@
 <!--components/AccountWaterCard/index.wxml-->
 <view class="water-card" catchtap='_tapEvent'>
-   <view class="card-icon today-icon"></view>
+   <view class="card-icon {{iconClass}}"></view>
    <view class="card-text">
-    <view class="row-first"><text>{{title}}</text><text class="{{iconClass}} card-amount">0.00</text></view>
-    <view class="row-second"><text class="card-amount">{{amountData}}</text><text class="card-spending card-amount">{{timeRange}}</text></view>
+    <view class="row-first"><text>{{title}}</text><text class="card-income card-amount">{{incomeAmount}}</text></view>
+    <view class="row-second"><text class="card-amount">{{dateRange}}</text><text class="card-spending card-amount">{{spendAmount}}</text></view>
    </view>
    <view class="card-arrow"></view>
  </view>
