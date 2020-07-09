@@ -12,28 +12,36 @@
     iconClass="today-icon"
     incomeAmount="{{todayData.incomeAmount}}"
     spendAmount="{{todayData.spendAmount}}"
-    dateRange="{{todayData.dateRange}}"
+    dateRange="{{todayData.timeRange}}"
+    bindtapEvent="tapEvent"
+    data-type='today'
  />
  <AccountWaterCard 
     title="本周"
     iconClass="week-icon"
     incomeAmount="{{weekData.incomeAmount}}"
     spendAmount="{{weekData.spendAmount}}"
-    dateRange="{{weekData.weekRange}}"
+    dateRange="{{weekData.timeRange}}"
+    bindtapEvent="tapEvent"
+    data-type='week'
  />
  <AccountWaterCard 
     title="本月"
     iconClass="month-icon"
     incomeAmount="{{monthData.incomeAmount}}"
     spendAmount="{{monthData.spendAmount}}"
-    dateRange="{{monthData.monthRange}}"
+    dateRange="{{monthData.timeRange}}"
+    bindtapEvent="tapEvent"
+    data-type='month'
  />
  <AccountWaterCard 
     title="上月"
     iconClass="lastMonth-icon"
     incomeAmount="{{lastMonthData.incomeAmount}}"
     spendAmount="{{lastMonthData.spendAmount}}"
-    dateRange="{{lastMonthData.lastMonthRange}}"
+    dateRange="{{lastMonthData.timeRange}}"
+    bindtapEvent="tapEvent"
+    data-type='lastMonth'
  />
  </view>
 </view>

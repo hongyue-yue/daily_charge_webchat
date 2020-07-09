@@ -1,0 +1,39 @@
+/* components/AccountDetail/index.wxss */
+.water-card{
+  padding:20rpx;
+  background-color:#fff;
+  border-radius:5rpx;
+  display: flex;
+  flex-direction:column;
+  width:92%;
+  margin:0 auto 10rpx;
+}
+.card-row{
+  display:flex;
+}
+.row-left{
+  flex:3;
+  text-align: left;
+}
+.row-right{
+  flex:1;
+  text-align: right;
+}
+.text-class{
+color:#000;
+font-size:14px;
+}
+.text-time,
+.text-account{
+  font-size:12px;
+  color:#b1adb3;
+}
+.text-amount{
+  font-size: 13px;
+}
+.text-red{
+  color:#ff5722
+}
+.text-green{
+  color:green
+}

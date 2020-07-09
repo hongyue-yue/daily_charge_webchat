@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "AccountDetail":"../../components/AccountDetail"
+  },
+  "navigationBarTextStyle": "black"
+}

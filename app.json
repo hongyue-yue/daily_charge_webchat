@@ -2,23 +2,27 @@
   "pages": [
     "pages/index/index",
     "pages/writeBill/index",
-    "pages/accountWater/index"
+    "pages/accountWater/index",
+    "pages/accountDetail/index"
   ],
-  "tabBar":{
-    "borderStyle":"white",
-    "color":"#616161",
-    "selectedColor":"#2979ff",
-    "list":[{
+  "tabBar": {
+    "borderStyle": "white",
+    "color": "#616161",
+    "selectedColor": "#2979ff",
+    "list": [
+      {
         "pagePath": "pages/accountWater/index",
         "text": "流水",
-        "iconPath":"img/accountWater.png",
-        "selectedIconPath":"img/accountWaterSelect.png"
-      },{
+        "iconPath": "img/accountWater.png",
+        "selectedIconPath": "img/accountWaterSelect.png"
+      },
+      {
         "pagePath": "pages/writeBill/index",
         "text": "记一笔",
         "iconPath": "img/pen.png",
         "selectedIconPath": "img/penSelect.png"
-      },{
+      },
+      {
         "pagePath": "pages/index/index",
         "text": "图表",
         "iconPath": "img/charts.png",

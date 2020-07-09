@@ -1,0 +1,11 @@
+<!--components/AccountDetail/index.wxml-->
+<view class="water-card">
+  <view class='card-row'>
+    <view class='row-left'><text class='text-class'>{{item.classification||''}}</text></view>
+    <view class='row-right'><text class="text-amount {{type=='income'?'text-red':'text-green'}}">{{amount}}</text></view>
+  </view>
+  <view class='card-row'>
+    <view class='row-left'><text class='text-time'>{{item.time||''}}</text></view>
+    <view class='row-right'><text class='text-account'>{{item.account||''}}</text></view>
+  </view>
+</view>

@@ -9,6 +9,12 @@ Page({
   onShow: function () {
    this.getWater()
   },
+  tapEvent(e){
+    let type=e.currentTarget.dataset.type
+    wx.navigateTo({
+      url:`/pages/accountDetail/index?type=${type}`
+    })
+  },
   async getWater(){
      let exp=/\d+\-\d+\-\d+/
      let list=await getFileList()
@@ -59,7 +65,7 @@ Page({
       incomeAmount:incomeAmount.toFixed(2),
       spendList,
       incomeList,
-      dateRange
+      timeRange:dateRange
     }
     console.log('todayData',todayData)
     app.globalData.todayData={
@@ -113,7 +119,7 @@ Page({
       incomeAmount:incomeAmount.toFixed(2),
       spendList,
       incomeList,
-      weekRange
+      timeRange:weekRange
     }
     app.globalData.weekData={
       ...weekData
@@ -168,7 +174,7 @@ let curMonth=moment().month()+1
     incomeAmount:incomeAmount.toFixed(2),
       spendList,
       incomeList,
-      monthRange
+      timeRange:monthRange
     }
     app.globalData.monthData={
       ...monthData
@@ -248,7 +254,7 @@ let curMonth=moment().month()+1
       incomeAmount:lastMonthData?lastMonthData.incomeAmount:incomeAmount.toFixed(2),
       spendList:lastMonthData?lastMonthData.spendList:spendList,
       incomeList:lastMonthData?lastMonthData.incomeList:incomeList,
-      lastMonthRange
+      timeRange:lastMonthRange
     }
     app.globalData.lastMonthData={
       ...obj
