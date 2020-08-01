@@ -1,0 +1,61 @@
+/* pages/billChart/index.wxss */
+
+ec-canvas {
+  width: 100%;
+  height: 100%;
+}
+.navbar {
+  display: flex;
+  position: relative;
+  z-index: 500;
+  top: 0;
+  width: 100%;
+  border-bottom: 1rpx solid #e5e5e5;
+  background-color: #fff;
+  align-items:center;
+}
+
+.navbar .navbar-item {
+  position: relative;
+  display: block;
+  flex: 1;
+  padding: 13px 0;
+  text-align: center;
+  font-size: 0;
+}
+.divide{
+  width:0;
+  height:50%;
+  border-left:1rpx solid #000; 
+}
+
+.navbar .navbar-title {
+  display: inline-block;
+  font-size: 15px;
+  width: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+.navbar .bar-item-on .navbar-title {
+  color: #118ef5;
+}
+
+.navbar .navbar-slider {
+  position: absolute;
+  content: " ";
+  left: 0;
+  bottom: 0;
+  width: 100rpx;
+  height: 5rpx;
+  background-color: #118ef5;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+.body {
+  flex: 1;
+  padding:20rpx;
+}

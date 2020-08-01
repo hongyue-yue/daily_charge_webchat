@@ -1,9 +1,9 @@
 {
   "pages": [
-    "pages/index/index",
     "pages/writeBill/index",
     "pages/accountWater/index",
-    "pages/accountDetail/index"
+    "pages/accountDetail/index",
+    "pages/billChart/index"
   ],
   "tabBar": {
     "borderStyle": "white",
@@ -23,7 +23,7 @@
         "selectedIconPath": "img/penSelect.png"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/billChart/index",
         "text": "图表",
         "iconPath": "img/charts.png",
         "selectedIconPath": "img/chartSelect.png"
