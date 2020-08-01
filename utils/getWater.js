@@ -197,7 +197,6 @@ let curMonth=moment().month()+1
    }catch(e){
     console.log(e)
    }
-  
    if(lastMonthDataString){
      lastMonthData=JSON.parse(lastMonthDataString)
    }else{

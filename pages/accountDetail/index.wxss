@@ -59,3 +59,21 @@ height:450rpx;
 .marL10{
   margin-left:15rpx
 }
+.right-picker{
+  float:right;
+}
+.picker-icon{
+  display: inline-block;
+  width:40rpx;
+  height:40rpx;
+  background-repeat: no-repeat;
+  background-size:100%;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABYElEQVRYR+2XwWrCQBCGJ6utYM3RexsKQmgD0heoD6GvU32d9g16sS9QCrYUhGI96zGoxOqujLCShtm4cTcEIblthpn55p/ZzcaBgh+n4PygDTDz/UZjVX0FEFH997NDgS9v7of4XmWnfLQBwuu7R8bYPsHVZET6LbxApNm1ADCRqi0SgHNOKnDMjnHd6ddbPP6/SmQFec9FXMEDQFzivAFQQakECUD12MYMSIVPApi3Wm79rzZ0hAhP3QVGADbacj4ANqpNi3F0BgoHUB00pmDxgyrzNjRNjv7nM4Sqj42pCqUCmRWIbtv+mm97DEBUWeWl9vPxLduAtg3fdnFN2Si/zAChF/QZwBMm4QADdzLqS4CFF+D7/TppU/lZBUiDswYgW4BVXrLKM9UCDuBQNmxB0i+zAqbbLulfApQKaCtge/iS8cgLibx0AsBDzgDvy4uo0xyPQ8yj/WuWF1ThADtvLZswN43qoQAAAABJRU5ErkJggg==');
+  vertical-align: middle;
+}
+.month-picker{
+  display:inline-block;
+  margin:0 10rpx;
+  transform: translate(0,5rpx);
+  color:#b1adb3
+}
