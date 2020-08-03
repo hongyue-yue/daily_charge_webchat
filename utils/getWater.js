@@ -11,7 +11,6 @@ const getWater={
          pathList.push(item.replace('.json',''))
        }
     })
-   
     this.setData({
       pathList
     },()=>{
@@ -22,14 +21,14 @@ const getWater={
     })
  },
  async getTodayData(){
-   if(app.globalData.todayData){
-     this.setData({
-       todayData:{
-         ...app.globalData.todayData
-       }
-     })
-     return
-   }
+  //  if(app.globalData.todayData){
+  //    this.setData({
+  //      todayData:{
+  //        ...app.globalData.todayData
+  //      }
+  //    })
+  //    return
+  //  }
    var todayPath=moment().format('YYYY-MM-DD')
    var list=await readFile(todayPath)
    var spendList=[],incomeList=[]
@@ -39,10 +38,10 @@ const getWater={
      list.forEach(item=>{
        if (item["category"] == "spend") {
          spendList.push(item);
-         spendAmount += Number(item['amount']);
+         spendAmount += Number(item['amount']||0);
        } else if (item["category"] == "income") {
          incomeList.push(item);
-         incomeAmount += Number(item['amount']);
+         incomeAmount += Number(item['amount']||0);
        }
      })
    }
@@ -63,14 +62,14 @@ const getWater={
    })
  },
  async getWeekData(){
-   if(app.globalData.weekData){
-     this.setData({
-       weekData:{
-         ...app.globalData.weekData
-       }
-     })
-     return
-   }
+  //  if(app.globalData.weekData){
+  //    this.setData({
+  //      weekData:{
+  //        ...app.globalData.weekData
+  //      }
+  //    })
+  //    return
+  //  }
    var {pathList}=this.data
    var currWeek=moment().weekday()
    var weekStart=moment().subtract(currWeek,'days')
@@ -94,10 +93,10 @@ const getWater={
      item.forEach(key=>{
        if (key["category"] == "spend") {
          spendList.push(key);
-         spendAmount += Number(key['amount']);
+         spendAmount += Number(key['amount']||0);
        } else if (key["category"] == "income") {
          incomeList.push(key);
-         incomeAmount += Number(key['amount']);
+         incomeAmount += Number(key['amount']||0);
        }
      })
    })
@@ -118,14 +117,14 @@ const getWater={
    })
  },
  async getMonthData(){
-   if(app.globalData.monthData){
-     this.setData({
-       monthData:{
-         ...app.globalData.monthData
-       }
-     })
-     return
-   }
+  //  if(app.globalData.monthData){
+  //    this.setData({
+  //      monthData:{
+  //        ...app.globalData.monthData
+  //      }
+  //    })
+  //    return
+  //  }
    var {pathList}=this.data
   const endDate = moment().month(moment().month()).endOf('month').format('YYYY-MM-DD');
 const lastMonthEndDay=moment().month(moment().month()-1).endOf('month').format('YYYY-MM-DD');
@@ -148,10 +147,10 @@ let curMonth=moment().month()+1
      item.forEach((key)=>{
        if (key["category"] == "spend") {
          spendList.push(key);
-         spendAmount += Number(key['amount']);
+         spendAmount += Number(key['amount']||0);
        } else if (key["category"] == "income") {
          incomeList.push(key);
-         incomeAmount += Number(key['amount']);
+         incomeAmount += Number(key['amount']||0);
        }
      });
    });
@@ -215,10 +214,10 @@ let curMonth=moment().month()+1
        item.forEach(key=>{
          if (key["category"] == "spend") {
            spendList.push(key);
-           spendAmount += Number(key['amount']);
+           spendAmount += Number(key['amount']||0);
          } else if (key["category"] == "income") {
            incomeList.push(key);
-           incomeAmount += Number(key['amount']);
+           incomeAmount += Number(key['amount']||0);
          }
        })
      })

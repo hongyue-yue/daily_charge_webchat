@@ -25,7 +25,7 @@ Page({
     this.setData({
       data: app.globalData[`${type}Data`],
       list: app.globalData[`${type}Data`].spendList,
-      balance: (app.globalData[`${type}Data`].incomeAmount - app.globalData[`${type}Data`].spendAmount).toFixed(2)
+      balance: (Number(app.globalData[`${type}Data`].incomeAmount) - Number(app.globalData[`${type}Data`].spendAmount)).toFixed(2)
     }, () => {
       wx.setNavigationBarTitle({
         title: this.data.data.timeRange
@@ -80,18 +80,19 @@ Page({
     } catch (e) {
       console.log(e)
     }
+    console.log(data,'111')
     if (data) {
       data = JSON.parse(data)
       this.setData({
         data:{
-          spendAmount:data.spendAmount,
-          incomeAmount: data.spendAmount,
+          spendAmount:Number(data.spendAmount)||'0.00',
+          incomeAmount: Number(data.spendAmount)||'0.00',
           spendList: data.spendList,
           incomeList: data.incomeList,
           lastMonthRange:data.lastMonthRange
         },
         list:type=='spend'?data.spendList:data.incomeList,
-        balance:(Number(data.incomeAmount)-Number(data.spendAmount)).toFixed(2)
+        balance:(Number(data.incomeAmount)||0-Number(data.spendAmount)||0).toFixed(2)
       })
     } else {
       let exp = /\d+\-\d+\-\d+/
@@ -112,17 +113,18 @@ Page({
           }
         } 
       }
+      debugger
       if(monthList.length==0){
         this.setData({
           data:{
-          spendAmount,
-          incomeAmount,
+          spendAmount:'0.00',
+          incomeAmount:'0.00',
           spendList,
           incomeList,
           lastMonthRange: `${moment(endDate).month()}月1日-${moment(endDate).month()}月${moment(endDate).date()}日`
           },
           list:[],
-          balance:0.00
+          balance:'0.00'
         })
         return
       }
@@ -130,10 +132,10 @@ Page({
         item.forEach(key=>{
           if (key["category"] == "spend") {
             spendList.push(key);
-            spendAmount += Number(key['amount']);
+            spendAmount += Number(key['amount']||0);
           } else if (key["category"] == "income") {
             incomeList.push(key);
-            incomeAmount += Number(key['amount']);
+            incomeAmount += Number(key['amount']||0);
           }
         })
       })

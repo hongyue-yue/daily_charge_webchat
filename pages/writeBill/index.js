@@ -19,6 +19,7 @@ Page({
       accountIndex: [0, 0],
       accountArray: [['现金账户', '信用卡', '金融账户', '虚拟账户', '负债账户', '债权账户'], ['现金(CNY)']],
       remarkValue: "",
+      amount:0,
     },
     income:{
       classIndex: [0, 0],
@@ -26,6 +27,7 @@ Page({
       accountIndex: [0, 0],
       accountArray: [['现金账户', '信用卡', '金融账户', '虚拟账户', '负债账户', '债权账户'], ['现金(CNY)']],
       remarkValue: "",
+      amount:0,
     }
    
    
@@ -232,9 +234,14 @@ Page({
     })
   },
   save:async function(e){
-    
     let type = e.currentTarget.dataset.type;
     let data = this.data[type];
+    if(Number(data.amount)==0){
+      wx.showToast({
+        title: '请输入金额',
+      })
+      return
+    }
     var obj={
       key:new Date().getTime(),
       category:type,

@@ -25,7 +25,7 @@ height:450rpx;
   color:#ff5722
 }
 .text-green{
-  color:green
+  color:#90EE90
 }
 .button-container{
   padding:5px ;

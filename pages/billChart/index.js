@@ -102,11 +102,14 @@ Page({
       option.legend.data=incomeLegendArr
       option.series[0].data=incomeArr
     }
-    chart.setOption(option)
     this.setData({
       canvasShow,
       sliderOffset: this.data.sliderOffsets[index],
       tab1Index: index,
+    },()=>{
+      if(canvasShow){
+        chart.setOption(option)
+      }
     })
   },
   /**
@@ -148,13 +151,17 @@ Page({
       }
       option.legend.data=Object.keys(spend)
       option.series[0].data=spendArr
-      
+     
       this.setData({
         canvasShow,
         incomeLegendArr:Object.keys(income),
         spendLegendArr:Object.keys(spend),
         incomeArr,
         spendArr,
+      },()=>{
+        if(canvasShow){
+          chart.setOption(option)
+        }
       })
       wx.setNavigationBarTitle({
         title: timeRange

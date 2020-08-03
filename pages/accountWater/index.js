@@ -1,6 +1,5 @@
-const app = getApp()
+
 const moment = require('../../utils/moment.min.js');
-const {getFileList,readFile}=require("../../utils/util");
 const {getWater }=require("../../utils/getWater");
 Page({
   data:{
@@ -8,6 +7,7 @@ Page({
     pathList:[],
   },
   onShow: function () {
+    
    this.getWater()
   },
   tapEvent(e){

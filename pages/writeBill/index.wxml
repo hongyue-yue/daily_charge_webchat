@@ -3,7 +3,7 @@
     <view id="0" class="navbar-item {{tab1Index==0?'bar-item-on':''}}" data-index='0' bindtap='onTab1Click'>
       <view class='navbar-title'>支出</view>
     </view>
-    <view class="divide"></view>
+   
     <view id="1" class="navbar-item {{tab1Index==1?'bar-item-on':''}}" data-index='1' bindtap='onTab1Click'>
       <view class='navbar-title'>收入</view>
     </view>
