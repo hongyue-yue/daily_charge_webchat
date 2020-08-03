@@ -11,6 +11,9 @@
 		<view class="navbar-slider" style="left: {{sliderLeft}}px; width:50px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
 	</view>
 	<view class="body">
-  <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
+	<view wx:if="{{canvasShow}}" class='empty-text'>
+	<ec-canvas  id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
+	</view>
+	<view wx:else class='empty-text'><text>暂无数据</text></view>
 	</view>
 </view>

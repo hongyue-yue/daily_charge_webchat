@@ -12,7 +12,7 @@ var option ={
   legend: {
       orient: 'horizontal',
       bottom: 40,
-      data: ['直接访问', '邮件营销', '联盟广告', '视频广告', '搜索引擎']
+      data: []
   },
   series: [
       {
@@ -35,13 +35,7 @@ var option ={
           labelLine: {
               show: false
           },
-          data: [
-              {value: 335, name: '直接访问'},
-              {value: 310, name: '邮件营销'},
-              {value: 234, name: '联盟广告'},
-              {value: 135, name: '视频广告'},
-              {value: 1548, name: '搜索引擎'}
-          ]
+          data: []
       }
   ]
 };
@@ -63,6 +57,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    canvasShow:true,
     sliderOffset: 0,
     sliderOffsets: [],
     sliderLeft: 0,
@@ -93,15 +88,23 @@ Page({
   onTab1Click(event) {
     let index = event.currentTarget.dataset.index;
     let {incomeLegendArr,spendLegendArr,incomeArr,spendArr}=this.data
+    let canvasShow=true
     if(index=='0'){
+      if(spendLegendArr.length==0){
+        canvasShow=false
+      }
       option.legend.data=spendLegendArr
       option.series[0].data=spendArr
     }else if(index=='1'){
+      if(incomeLegendArr.length==0){
+        canvasShow=false
+      }
       option.legend.data=incomeLegendArr
       option.series[0].data=incomeArr
     }
     chart.setOption(option)
     this.setData({
+      canvasShow,
       sliderOffset: this.data.sliderOffsets[index],
       tab1Index: index,
     })
@@ -109,7 +112,7 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onReady: function (options) {
     this.clueOffset();
     this.getData()
   },
@@ -117,7 +120,7 @@ Page({
   async getData(){
       await this.getLastMonthData()
       //console.log(this.data.lastMonthData)
-      let income={},spend={};
+      let income={},spend={},canvasShow=true;
       const {incomeList,spendList,timeRange}=this.data.lastMonthData
       incomeList.forEach(item=>{
         if(income[item.classification]){
@@ -140,10 +143,14 @@ Page({
       Object.keys(spend).forEach(key=>{
         spendArr.push({value:income[key],name:key})
       })
+      if(spendArr.length==0){
+        canvasShow=false
+      }
       option.legend.data=Object.keys(spend)
       option.series[0].data=spendArr
-     
+      
       this.setData({
+        canvasShow,
         incomeLegendArr:Object.keys(income),
         spendLegendArr:Object.keys(spend),
         incomeArr,

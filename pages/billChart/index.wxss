@@ -59,3 +59,11 @@ ec-canvas {
   flex: 1;
   padding:20rpx;
 }
+.empty-text{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background-color:#fff;
+  height:100%;
+  color:#b1adb3;
+}
